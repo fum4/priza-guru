@@ -41,7 +41,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 80%;
+    width: 85%;
 }
 
 .story-container {
@@ -64,13 +64,19 @@
 .final-sentence {
     opacity: 0;
     animation: appear 2s ease-in forwards;
-    animation-delay: 2s;
+    animation-delay: 2.75s;
+}
+
+.final-sentence-icon {
+    opacity: 0;
+    animation: appear 2s ease-in forwards;
+    animation-delay: 1.5s;
 }
 
 .start-game-btn {
     opacity: 0;
     animation: appear 2s ease-in forwards;
-    animation-delay: 2.5s;
+    animation-delay: 4s;
 }
 
 .skip-btn {

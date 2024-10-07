@@ -6,15 +6,15 @@ const audio = new Audio(rainSound);
 
 const story = [
     "Într-o zi, Ticu, mare maestru în montat prize, primește un telefon urgent...",
-    "„Avem o casă fără nicio priză funcțională!” se aude din centralǎ...",
+    "„Avem o casă fără nicio priză funcțională!” ...se aude din centralǎ",
     "„Hai te rog, nu mai fi pizdǎ! Mă pricep la orice priză!”",
     "„Nu e priză să mă învingă, cât de mare, cât de micǎ!”",
-    "Printre scheme și bǎșini, se aude din vecini:",
-    "„Ticule, n-ai terminat! Prizele au explodat!”",
+    "Printre scheme și bǎșini, se aude din vecini...",
+    "„Ticule, ne-ai terminat! Prizele au explodat!”",
 ];
 
 export const Intro = ({ onStart }: { onStart: () => void }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);    
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -33,7 +33,7 @@ export const Intro = ({ onStart }: { onStart: () => void }) => {
 
         return () => audio.pause();
     }, []);
-    
+
     return (
         <div className='intro-container'>
             <div className="story-container">
@@ -50,20 +50,23 @@ export const Intro = ({ onStart }: { onStart: () => void }) => {
                     </p>
                 ))}
                 {currentIndex >= story.length - 1 && (
-                    <p className="final-sentence">
-                        Alo, 112...?
-                    </p>
+                    <div>
+                        <h1 className="final-sentence-icon">🔌</h1>
+                        <p className="final-sentence">
+                            Alo, 112...?
+                        </p>
+                    </div>
                 )}
             </div>
             {currentIndex >= story.length - 1 ? (
-                <button 
+                <button
                     onClick={onStart}
                     className='start-game-btn'
                 >
                     Sǎ montǎm prize!
-                </button>  
+                </button>
             ) : (
-                <button 
+                <button
                     onClick={onStart}
                     className='skip-btn'
                 >
