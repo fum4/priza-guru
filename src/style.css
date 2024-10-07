@@ -34,3 +34,75 @@
     75% { transform: rotate(-5deg); }
     90% { transform: rotate(0deg); }
 }
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.story-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 50%;
+    width: 100%;
+}
+
+.story-text {
+    position: absolute;
+    opacity: 0;
+    animation: fadeInOut 4s ease-out forwards;
+}
+
+.final-sentence {
+    opacity: 0;
+    animation: appear 2s ease-in forwards;
+    animation-delay: 2s;
+}
+
+.start-game-btn {
+    opacity: 0;
+    animation: appear 2s ease-in forwards;
+    animation-delay: 2.5s;
+}
+
+.skip-btn {
+    background: none;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
