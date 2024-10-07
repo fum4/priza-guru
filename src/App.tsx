@@ -4,6 +4,8 @@ import priza from '/priza_1.webp';
 import wrenchSound from '/wrench_sound.mp4';
 import './style.css';
 
+const audio = new Audio(wrenchSound);
+
 function App() {
   const [count, setCount] = useState(0);
   const [prize, setPrize] = useState<{id: number; src: string, position: number}[]>([]);
@@ -14,7 +16,6 @@ function App() {
         setPrize([...prize, { id: Date.now(), src: priza, position: Math.random() * 80 }]);
 
         if (!isPlayingSound) {
-            const audio = new Audio(wrenchSound);
             audio.play();
             setIsPlayingSound(true);
 
