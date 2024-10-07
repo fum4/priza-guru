@@ -15,9 +15,9 @@
 .priza {
     position: absolute;
     animation: fall 2s linear forwards;
-    animation-iteration-count: 5;
-    width: 100px;
-    height: 100px;
+    animation-iteration-count: 2;
+    width: 80px;
+    height: 80px;
 }
 
 @keyframes fall {
