@@ -46,7 +46,7 @@ function App() {
             <h4>Highscore: <span style={{ fontSize: 20, color: '#69e769'}}>{(elapsedTime / 1000).toFixed(1)}s</span></h4>
             <img
                 src={guru}
-                className="logo"
+                className="guru"
                 alt="Guru"
                 style={{
                     filter: `blur(${blurValue}px)`,
