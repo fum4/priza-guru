@@ -54,14 +54,16 @@ function App() {
                 }}
             />
             <h4>Salut, azi am instalat {count} prize</h4>
-            {blurValue === 0 ? (
-                <>
-                    <h1 style={{ margin: 0 }}>🎉</h1>
-                    <h4>Felicitǎri, ai montat toate prizele!</h4>
-                </>
-            ) : (
-                <button onClick={handleClick}>Dǎ o prizǎ!</button>
-            )}
+            <div style={{ height: 80, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                {blurValue === 0 ? (
+                    <>
+                        <h1 style={{ margin: 0 }}>🎉</h1>
+                        <h4>Felicitǎri, ai montat toate prizele!</h4>
+                    </>
+                ) : (
+                    <button onClick={handleClick}>Dǎ o prizǎ!</button>
+                )}
+            </div>
             {prize.map(priza => (
                 <img key={priza.id} src={priza.src} className="priza" alt="Falling prizǎ"
                      style={{left: `${priza.position}vw`}}/>
