@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+import {useRef, useState} from 'react';
 import guru from '/guru.jpg';
 import priza from '/priza_1.webp';
 import wrenchSound from '/wrench_sound.mp4';
@@ -44,7 +44,15 @@ function App() {
     <>
         <div className='container'>
             <h4>Highscore: <span style={{ fontSize: 20, color: '#69e769'}}>{(elapsedTime / 1000).toFixed(1)}s</span></h4>
-            <img src={guru} className="logo" alt="Guru" style={{filter: `blur(${blurValue}px)`}}/>
+            <img
+                src={guru}
+                className="logo"
+                alt="Guru"
+                style={{
+                    filter: `blur(${blurValue}px)`,
+                    animation: `${blurValue === 0 ? 'shake 0.5s ease-in-out 3' : ''}`
+                }}
+            />
             <h4>Salut, azi am instalat {count} prize</h4>
             {blurValue === 0 ? (
                 <>
