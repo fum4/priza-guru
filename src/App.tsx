@@ -40,6 +40,14 @@ function App() {
         }
     }
 
+    const handleReset = () => {
+        setCount(0);
+        setPrize([]);
+        setBlurValue(50);
+        setStartTime(0);
+        setElapsedTime(0);
+    }
+
   return (
     <>
         <div className='container'>
@@ -53,15 +61,23 @@ function App() {
                     animation: `${blurValue === 0 ? 'shake 0.5s ease-in-out 3' : ''}`
                 }}
             />
-            <h4>Salut, azi am instalat {count} prize</h4>
-            <div style={{ height: 80, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <h4>{blurValue === 0 ? 'Felicitǎri, ai montat toate prizele!' : `Salut, azi am instalat ${count} prize`}</h4>
+            <div style={{ height: 121, width: '80vw', maxWidth: 400, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 {blurValue === 0 ? (
                     <>
-                        <h1 style={{ margin: 0 }}>🎉</h1>
-                        <h4>Felicitǎri, ai montat toate prizele!</h4>
+                        <h1 style={{margin: 0, marginBottom: 25}}>🎉</h1>
+                        <button onClick={handleReset} style={{ display: 'flex', alignItems: 'center', gap: 10}}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" className="lucide lucide-rotate-ccw">
+                                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                                <path d="M3 3v5h5"/>
+                            </svg>
+                            Mai bagǎ prize
+                        </button>
                     </>
                 ) : (
-                    <button onClick={handleClick}>Dǎ o prizǎ!</button>
+                    <button style={{width: '100%'}} onClick={handleClick}>Dǎ o prizǎ!</button>
                 )}
             </div>
             {prize.map(priza => (
