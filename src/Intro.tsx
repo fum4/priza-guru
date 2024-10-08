@@ -9,6 +9,8 @@ const story = [
     "„Avem o casă fără nicio priză funcțională!” ...se aude din centralǎ",
     "„Hai te rog, nu mai fi pizdǎ! Mă pricep la orice priză!”",
     "„Nu e priză să mă învingă, cât de mare, cât de micǎ!”",
+    "Ticu pleaca intrigat... şef pe zonǎ la montat",
+    "Trei minute, patru prize... le rezolvǎ pe reprize ",
     "Printre scheme și bǎșini, se aude din vecini...",
     "„Ticule, ne-ai terminat! Prizele au explodat!”",
 ];

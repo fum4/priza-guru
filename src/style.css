@@ -64,7 +64,7 @@
 .final-sentence {
     opacity: 0;
     animation: appear 2s ease-in forwards;
-    animation-delay: 2.75s;
+    animation-delay: 4s;
 }
 
 .final-sentence-icon {
@@ -76,7 +76,7 @@
 .start-game-btn {
     opacity: 0;
     animation: appear 2s ease-in forwards;
-    animation-delay: 5s;
+    animation-delay: 6s;
 }
 
 .skip-btn {
